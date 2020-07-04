@@ -1,0 +1,180 @@
+
+ *{
+margin: 5px;
+padding: 1px;
+box-sizing: border-box;
+}
+
+body {
+font-family: courgette, arial, sans-serif;
+}
+
+header {
+display: flex;
+background: ivory;
+margin: auto;
+align-items: center;
+}
+
+.logo-container,.logo{
+display: flex;
+}
+
+.logo-container {
+background: honeydew;
+flex: 1;
+filter: drop-shadow(0px 6px 4px black);
+animation: anim2 1.5s ease;
+}
+
+.logo {
+font-size: 40px;
+font-weight: 2500;
+margin: 35px;
+}
+
+.table {
+width=100%;
+}
+
+table, th, td {
+border: 0.5px solid black;
+
+}
+
+th,td {
+font-size: 25px;
+padding: 10px;
+}
+
+th,td {
+text-align: center;
+}
+
+nav {
+background: ivory;
+overflow: hidden;
+}
+
+
+.nav-links {
+display: flex;
+justify-content: space-around;
+list-style: none;
+}
+
+.nav-link {
+color: black;
+font-size: 20px;
+text-decoration: none;
+}
+
+.dropdown {
+float: left;
+overflow: hidden;
+}
+
+.dropdown .dropbtn {
+font-size: 20px;
+border: none;
+outline: none;
+background-color: inherit;
+font-family: inherit;
+margin: 0;
+}
+
+.dropdown:hover .dropbtn {
+background-color: ghostwhite;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background: honeydew;
+min-width: 150px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+float: none;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: center;
+}
+
+.dropdown-content a:hover {
+background: azure;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.present {
+display: flex;
+margin: auto;
+min-height: 80vh;
+background: azure;
+filter: drop-shadow(0px 5px 3px black);
+}
+
+.introduction {
+flex: 1;
+}
+
+.intro-text h2 {
+font-size: 35px;
+font-weight: 500;
+}
+
+.intro-text h3 {
+font-size: 30px;
+font-weight: 500;
+}
+
+.intro-text p,ul {
+font-size: 17px;
+font-weight: 500;
+}
+
+.cover {
+flex: 1;
+}
+
+.form {
+font-size: 20px;
+font-weight: 500;
+background: ghostwhite;
+}
+
+.cover img {
+width: 100%;
+height: auto;
+filter: drop-shadow(0px 6px 4px black);
+animation: anim 1.5s ease;
+}
+
+@keyframes anim {
+0% {
+opacity: 0;
+transform: translateY(-80px);
+}
+100% {
+opacity: 1;
+transform: translateY(0px);
+}
+}	    
+
+@keyframes anim2 {
+0% {
+opacity: 0;
+transform: translateX(-80px);
+}
+100% {
+opacity: 1;
+transform: translateX(0px);
+}
+}	    
