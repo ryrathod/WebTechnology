@@ -187,6 +187,9 @@ var arrayaddr = Array();
 var arrayemail = Array();
 var arraycharacter = Array();
 var arraygender = Array();
+var today, month, year, date, hours, minutes, seconds; 
+var c_date = Array();
+var c_time = Array();
 
 function add_details() {
     arrayname[i] = document.getElementById("name").value;
@@ -194,6 +197,19 @@ function add_details() {
     arrayemail[i] = document.getElementById("email").value;
     arraycharacter[i] = document.getElementById("hname").value;
     arraygender[i] = document.getElementById("gender").value;
+    today = new Date();
+    month = today.getMonth() + 1;
+    year = today.getFullYear();
+    date = today.getDate();
+    c_date[i] = date+'/'+month+'/'+year;
+    hours = addZero(today.getHours());
+    minutes = addZero(today.getMinutes());
+    seconds = addZero(today.getSeconds());
+    c_time[i] = hours+':'+minutes+':'+seconds;
+
+    function addZero(num) { 
+    return num < 10 ? `0${num}`:num;
+    }
     i++;
 }
 
@@ -206,7 +222,7 @@ function display_details() {
     else {
    for (var y=0; y<arrayname.length; y++)
    {
-     e +=  y+1 + ". Name: " + arrayname[y] + "<br/>" + "   Gender: " + arraygender[y] + "<br/>" + "   Address: " + arrayaddr[y] + "<br/>" + "   Halloween Character: " + arraycharacter[y] + "<br/>" + "    Email: " + arrayemail[y] +  "<br/>" + "<br/>"; 
+     e +=  y+1 + ". Name: " + arrayname[y] + "<br/>" + "   Gender: " + arraygender[y] + "<br/>" + "   Address: " + arrayaddr[y] + "<br/>" + "   Halloween Character: " + arraycharacter[y] + "<br/>" + "    Email: " + arrayemail[y] +  "<br/>" + "    Registration Time: " + c_time[y] + " , " + c_date[y] +  "<br/>" + "<br/>"; 
     }
 }
    document.getElementById("listreg").innerHTML = e;
