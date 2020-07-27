@@ -212,4 +212,13 @@ function display_details() {
    document.getElementById("listreg").innerHTML = e;
    document.getElementById("name").value = "";
    document.getElementById("addr").value = "";
+   document.getElementById("gender").value = "Default";
+   document.getElementById("email").value = "";
+   document.getElementById("passid").value = "";
+   document.getElementById("hname").value = "Default";
+   document.getElementById("eventname1").checked = false;
+   document.getElementById("eventname2").checked = false;
+   document.getElementById("eventname3").checked = false;
+   document.getElementById("eventname4").checked = false;
+   document.getElementById("eventname5").checked = false;
 }
