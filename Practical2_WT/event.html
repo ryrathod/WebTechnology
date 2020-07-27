@@ -1,0 +1,105 @@
+<html>
+<head>
+    <title>Event Registration Website WT Practical Rishabh Rathod</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" /> 
+    <script src="js/register.js"></script>
+</head>
+<body>
+    <main>
+        <section class="present">
+            <header>
+                <div class="overlay"></div>
+                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                    <source src="media/HalloweenBackground.mp4" type="video/mp4">
+                        Your Browser does not support the Video tag.
+                </video>
+                <div class="container h-100">
+                    <div class="d-flex h-100 align-items-center">
+                    </div>
+                </div>
+            </header>
+            <head>
+                <script src='http://use.edgefonts.net/nosifer.js'></script>
+                <div class="heading">
+                    <h1>Halloween Hootenanny</h1>
+                </div>
+            </head>
+            <nav>
+                <ul class="nav-buttons">
+                    <button onclick="button1Function()" class="button homebutton">Home</button>
+                    <button onclick="button2Function()" class="button regbutton">Registration</button>
+                    <button onclick="button3Function()" class="button showbutton">Show Registrants</button>
+                </ul>
+            </nav>
+            <div class="navigation">
+                <div id="h" class="Home">
+                    <head1>
+                        <script src='http://use.edgefonts.net/frijole.js'></script>
+                        <h2>Welcome to Halloween Hootenanny</h2>
+                        <p1>Get ready to experience creepy, crawly, eerie, ghoulish and frightening Halloween fun in Minneapolis during 27th-31st October, 2020!! You can get your fix of all things Halloween at our haunted houses, pumpkin patches and several miles of corn mazes. And don't forget about the Zombies. There are lots and lots of Zombies. A lot of events that you don't want to miss out on.<br>A free entry to events such as:</p1>
+                        <p2><h3>The Great Pumpkin Walk</h3>Tuesday, October 27, 2020; 1-4 pm<br>The City of Minneapolis hosts the Great Pumpkin Walk each year on the streets of downtown East Lansing. Also a number of fun, new things are planned:<br>Top Hat Side Show Performance (1-2 pm)<br>
+                           Downtown Trick-or-Treating (2-4 pm)<br>Live Music (2-4 pm)<h3>Trick-or-Treating on Halloween Night</h3>October 31st; 6 pm to 9 pm<br>a Halloween ritual custom for children and adults. The "treat" is usually some form of candy, although in some cultures money is given instead. The "trick" refers to a threat, usually idle, to perform mischief on the homeowner or their property if no treat is given.
+                        <h3>Wabasha Street Cave Tours</h3>Lost Souls Tour: 27th-28th October<br>Ghosts & Graves: 29th-30th October<br>Get in the Halloween Spirit with Wabasha Street Cave tours of walking and bus tours that include stories of haunted sites, murders and cave visits.<br></p2>
+                        <h3>Paid Events include:</h3>
+                        <p2><h3>The Haunted Basement</h3>29th-31st October; 6 pm to 3 am<br>Entry fee: $20 per person<br>Prepare yourself for an immersive theater experience at the Haunted Basement. You may get very messy, you may have to crawl, and you may find yourself in a confined space with something horrible.
+                        <h3>Goosebumps: 90's Halloween Party</h3>October 31st; 9:30 pm to 2 am<br>What goes bump in the night? Join Flip Phone for an all 90's night in Northeast Minneapolis! At midnight the costume contest will be held (costumes do not need to be from the 90s). The event is 21+ and a $10 cover at the door.<br></p2>
+                        <p1>Also, no need to pay for these events in advance. Register now and Pay during the event; that means an absolute free registration!! So don't wait for the eleventh hour and Register Now</p1>
+                    </head1>
+                </div>
+                <div id="r" class="RegistrationForm">
+                    <h2>Registration Form</h2>
+                    <form name="registration" onSubmit="return formValidation();">
+                        <ul class="form-list">
+                            <li><label for="username">Name:</label></li>
+                            <li><input type="text" id="name" name="username" size="50" /></li>
+                            <li><label for="address">Address:</label></li>
+                            <li><input type="text" id="addr" name="address" size="50" /></li>
+                            <li><label for="gender">Gender:</label></li>
+                            <li><select id="gender" name="gender">
+                            <option selected="" value="Default">(Please select your Gender)</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Prefer not to specify">Prefer not to specify</option>
+                            </select></li>
+                            <li><label for="email">Email:</label></li>
+                            <li><input type="text" id="email" name="email" size="50" /></li>
+                            <li><label for="passid">Password:</label></li>
+                            <li><input type="password" id="passid" name="passid" size="12" /></li>
+                            <li><label for="hname">Halloween Character:</label></li>
+                            <li><select id="hname" name="hname">
+                            <option selected="" value="Default">(Please select your Halloween Character)</option>
+                            <option value="Blair">Blair</option>
+                            <option value="Casper">Casper</option>
+                            <option value="Dorsilla">Dorsilla</option>
+                            <option value="Dracula">Dracula</option>
+                            <option value="Elvira">Elvira</option>
+                            <option value="Frankenstein">Frankenstein</option>
+                            <option value="Grim Reaper">Grim Reaper</option>
+                            <option value="Micheal Myers">Micheal Myers</option>
+                            <option value="Oogie Boogie">Oogie Boogie</option>
+                            <option value="Rob Zombie">Rob Zombie</option>
+                            <option value="Wren">Wren</option>
+                            </select></li>
+                            <li><label id="eventname">Events that you are interested in:</label></li>
+                            <li><input type="radio" name="event1" value="The Great Pumpkin Walk" /><span>The Great Pumpkin Walk</span></li>
+                            <li><input type="radio" name="event2" value="Trick-or-Treating on Halloween Night" /><span>Trick-or-Treating on Halloween Night</span></li>
+                            <li><input type="radio" name="event3" value="Wabasha Street Cave Tours" /><span>Wabasha Street Cave Tours</span></li>
+                            <li><input type="radio" name="event4" value="The Haunted Basement" /><span>The Haunted Basement</span></li>
+                            <li><input type="radio" name="event5" value="Goosebumps: 90's Halloween Party" /><span>Goosebumps: 90's Halloween Party</span></li>
+                            <li><input type="checkbox" name="en" value="en" checked /><span>Would you like to receive updates regarding the event on your registered email?</span></li>
+                            <li><input type="submit" name="submit" value="Submit"  /></li>
+                        </ul>
+                    </form>
+                </div>
+                <div id="s" class="ShowRegistrants">
+                    <h2>List of Registrants:</h2>
+                    <div id="listreg" class="listreg"></div>
+                </div>
+            </div>    
+            <footer>
+                <p>&copy; Copyright 2020, Rishabh Rathod</p>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>

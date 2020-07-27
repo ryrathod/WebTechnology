@@ -1,0 +1,200 @@
+*{
+    margin: 5px;
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', arial, sans-serif;
+}
+
+header {
+    position: relative;
+    background-color: black;
+    height: 85vh;
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+  }  
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  header .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .present {
+    margin: auto;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  }
+
+  .heading {
+    margin: 10px;
+    font-size: 40px;
+    font-family: nosifer, great vibes, Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+
+  .nav-buttons {
+    margin: 5px;
+    padding: 1px;
+    list-style: none;
+    text-align: center;
+    justify-content: space-evenly;
+    background: rgb(148,187,233);
+    background: radial-gradient(circle, rgba(148,187,233,1) 0%, rgba(238,174,202,1) 100%);
+    }
+    
+    .navigation {
+      text-align: center;
+      background: rgb(238,174,202);
+      background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    }
+    .Home {
+      display: block;
+      font-family: frijole;
+      background: -webkit-linear-gradient(#000, #ff7b00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .RegistrationForm {
+      display: none;
+      font-family: frijole;
+    }
+
+    .ShowRegistrants {
+      display: none;
+      font-family: frijole;
+      background: -webkit-linear-gradient(#000, #ff7b00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .button {
+      margin: 10px;
+      font-family: "Arial Black", Gadget, sans-serif;
+      font-size: 20px;
+      padding: 15px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: #FFF;
+      box-shadow: 0 0 20px #eee;
+      border-radius: 10px;
+      width: 200px;
+      border: none;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+      cursor: pointer;
+      display: inline-block;
+      border-radius: 25px;
+    }
+
+    .button:hover {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      margin: 8px 10px 12px;
+    }
+
+    .homebutton {
+      background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)
+    }
+    .homebutton:hover {
+      background-position: right center;
+    }
+
+    .regbutton {
+      background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)
+    }
+    .regbutton:hover {
+      background-position: right center;
+    }
+
+    .showbutton {
+      width: 270px;
+      background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)
+    }
+    .showbutton:hover {
+      background-position: right center;
+    }
+
+    .button:active {
+      background-image: linear-gradient(to right, #2BC0E4 0%, #EAECC6 51%, #2BC0E4 100%)
+    }
+    .button:focus {
+      background-image: linear-gradient(to right, #2BC0E4 0%, #EAECC6 51%, #2BC0E4 100%)
+    }
+
+    h1 {
+      background: -webkit-linear-gradient(#000, #FF4500);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+      background: -webkit-linear-gradient(#000, #ff7b00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 35px;
+    }
+
+    h3 {
+      background: -webkit-linear-gradient(#000, #ff7b00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 25px;
+    }
+
+    p1 {
+      font-size: 25px;
+    }
+
+    p2 {
+        font-size: 20px;
+    }
+
+    .listreg {
+      font-size: 25px;
+    }
+
+    .form-list {
+      list-style: none;
+      font-family: frijole;
+      font-size: 20px;
+    }
+
+    p {
+      background: #000;
+      color: #FFF;
+      text-align: center;
+      font-size: 18px;
+    }
