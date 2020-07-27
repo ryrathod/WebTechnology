@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: great vibes, 'Times New Roman', arial, sans-serif;
+    font-family: 'Times New Roman', arial, sans-serif;
 }
 
 header {
@@ -80,7 +80,7 @@ header video {
     }
     .Home {
       display: block;
-      font-family: frijole;
+      font-family: frijole, great vibes, courgette;
       background: -webkit-linear-gradient(#000, #ff7b00);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -88,12 +88,12 @@ header video {
 
     .RegistrationForm {
       display: none;
-      font-family: frijole;
+      font-family: frijole, great vibes, courgette;
     }
 
     .ShowRegistrants {
       display: none;
-      font-family: frijole;
+      font-family: frijole, great vibes, courgette;
       background: -webkit-linear-gradient(#000, #ff7b00);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -188,7 +188,7 @@ header video {
 
     .form-list {
       list-style: none;
-      font-family: frijole;
+      font-family: frijole, great vibes, courgette;
       font-size: 20px;
     }
 
