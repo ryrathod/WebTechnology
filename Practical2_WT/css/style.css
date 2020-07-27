@@ -80,7 +80,7 @@ header video {
     }
     .Home {
       display: block;
-      font-family: frijole, great vibes, courgette;
+      font-family: frijole, courgette;
       background: -webkit-linear-gradient(#000, #ff7b00);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -88,12 +88,12 @@ header video {
 
     .RegistrationForm {
       display: none;
-      font-family: frijole, great vibes, courgette;
+      font-family: frijole, courgette;
     }
 
     .ShowRegistrants {
       display: none;
-      font-family: frijole, great vibes, courgette;
+      font-family: frijole, courgette;
       background: -webkit-linear-gradient(#000, #ff7b00);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -188,7 +188,7 @@ header video {
 
     .form-list {
       list-style: none;
-      font-family: frijole, great vibes, courgette;
+      font-family: frijole, courgette;
       font-size: 20px;
     }
 
