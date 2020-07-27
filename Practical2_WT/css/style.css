@@ -9,17 +9,17 @@ body {
 }
 
 @font-face {
-  font-family: 'Frijole';
+  font-family: 'frijole';
   font-style: normal;
   font-weight: 400;
-  src: local('Frijole'), url(http://themes.googleusercontent.com/static/fonts/frijole/v2/KY1jGfdOyy7wGqIgHMe1-A.ttf) format('truetype');
+  src: url(Frijole-Regular.ttf) format('truetype');
 }
 
 @font-face {
-  font-family: 'Nosifer Caps';
+  font-family: 'nosifer';
   font-style: normal;
-  font-weight: 400;
-  src: local('Nosifer Caps Regular'), local('NosiferCaps-Regular'), url(http://themes.googleusercontent.com/static/fonts/nosifercaps/v2/5Vh3eVJZ2pCbwAqfFmh1F4nF5uFdDttMLvmWuJdhhgs.ttf) format('truetype');
+  font-weight: 600;
+  src: url(Nosifer-Regular.ttf) format('truetype');
 }
 
 header {
