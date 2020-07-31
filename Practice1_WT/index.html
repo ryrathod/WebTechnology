@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Practice Assignment 1</title>
+    </head>
+    <body>
+        <h1>JavaScript Practice Assignment 1</h1>
+        <p><b>Problem Statement:</b> Write a JavaScript code to generate the PRN number. Setup the initial configuration to generate the following permanent registration number.
+            2-digti for current year 2-letter branch code like, CS,EX,CV,ME,CH,etc. 2-digit for batch no. padded with 0 from left if less than 10. 
+            4-digit sequential number padded with zero "0" from left. 000 if the number is less than 10 00 if the number is less than 100 0 if the number is less than 1000<br>
+            Example: 20CS010001 20 -current year CS -Computer Science 01 -batch 1 0001-sequence number 1.<br></p>
+        <p><b>Solution: </b>Let's assume for the sake of simplicity that there are only 3 students in every batch of each branch.</p>
+        <form name="prn" onSubmit="return checkDetails();">
+            <ul style="list-style-type:none;">
+                <li><label for="name">Name of Student:</label></li>
+                <li><input type="text" style="margin: 10px;" id="name" name="name" size="50" /></li>
+                <li><label for="branch">Branch:</label></li>
+                <li><select id="branch" name="branch">
+                    <option selected="" value="Default">(Please select your Branch)</option>
+                    <option value="CH">Chemical</option>
+                    <option value="CV">Civil</option>
+                    <option value="CS">Computer Science</option>
+                    <option value="EX">Electronics</option>
+                    <option value="ME">Mechanical</option>
+                    </select>
+                </li>
+                <li><input type="submit" style="margin: 10px;" name="submit" value="Submit" /></li>
+            </ul>
+        </form>
+        <p>Students:</p>
+        <div id="prnDisplay" style="display: block;"></div>
+        <script>
+            function checkDetails()
+            {
+                var Name = document.prn.name;
+                var Branch = document.prn.branch;
+                
+                if(allLetter(Name))
+                {
+                    if(branchselect(Branch)) {}
+                }
+                return false;
+            }
+            function allLetter(Name)
+            { 
+                var letters = /^[A-Za-z]+ [A-Za-z]+$/;
+                if(Name.value.match(letters))
+                {
+                    return true;
+                }
+                else   
+                {   
+                    alert('Name must have alphabet characters only');
+                    Name.focus();
+                    return false;
+                }      
+            }
+            function branchselect(Branch)
+            {
+                if(Branch.value == "Default")
+                {
+                    alert('Select your Branch from the list');
+                    Branch.focus();
+                    return false;
+                }
+                else
+                {
+                    alert("Details Submitted");
+                    add_details();
+                    display_prn();
+                    return true;
+                }
+            }
+            var i=0,j=0;
+            var arrayname = Array();
+            var arraybranch = Array();
+            var arraybatch = Array();
+            var arrayroll = Array();
+            var arrayprn = Array();
+            var str=new Date().getFullYear()+"";
+            str= str.match(/\d{2}$/);
+
+            function add_details()
+            {
+                arrayname[i] = document.getElementById("name").value;
+                arraybranch[i] = document.getElementById("branch").value;
+                arraybatch[i] = addZerobatch(i+1);
+                arrayroll[i] = addZeroroll(i+1);
+                arrayprn[i] = str+arraybranch[i]+arraybatch[i]+arrayroll[i];
+
+                function addZerobatch(num1)
+                {
+                    return num1 < 10 ? `0${num1}`:num1;
+                }
+                function addZeroroll(num)
+                {
+                    if(num<10)
+                    {
+                        return `000${num}`;
+                    }
+                    else if(num<100)
+                    {
+                        return `00${num}`;
+                    }
+                    else if(num<1000)
+                    {
+                        return `0${num}`;
+                    }
+                    else 
+                    {
+                        return num;
+                    }
+                }
+                i++;
+            }
+            function display_prn()
+            {
+                var disp = "<hr/>";
+                for (j=0; j<arrayname.length; j++)
+                {
+                    disp +=  j+1 + "." + " Name: " + arrayname[j] + "<br/>" + " Branch: " + arraybranch[j] + "<br/>" + " PRN: " + arrayprn[j] + "<br/>"+"<br/>";
+                }
+                document.getElementById("prnDisplay").innerHTML = disp;
+                document.getElementById("name").value = "";
+                document.getElementById("branch").value = "Default";
+            }
+        </script>
+    </body>
+    <footer>
+        <p>&copy; Copyright 2020, Rishabh Rathod</p>
+    </footer>
+</html>
