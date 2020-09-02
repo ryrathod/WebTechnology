@@ -12,7 +12,7 @@ $(document).ready(function () {
   //Listner for selecting a menu item
   $("#menu").change((e) => {
     const selected = menudata[e.target.value];
-    $('#dataholder').html(
+    $('#showdata').html(
       `<p> ID - ${selected.id} </p>
       <p> Short Name - ${selected.short_name} </p>
       <p> Name - ${selected.name} </p>
