@@ -1,17 +1,27 @@
-$(document).ready(function(){
-    load_json_data('menu');
-    function load_json_data(id, name)
-    {
-        var html_code = '';
-        $.getJSON('menu_items.json', function(data){
-        html_code += '<option value="">Select '+id+'</option>';
-        $.each(data,function(key,value){
-            if(id == 'menu')
-            {
-                html_code += '<option value="'+value.id+'">'+value.name+'</option';
-            }
-        });
-        $('#'+id).html(html_code);
-        });
-    }
+var menudata = [];
+
+$(document).ready(function () {
+  //Get data from file
+  $.get("https://davids-restaurant.herokuapp.com/menu_items.json", function (data) {
+    menudata = data.menu_items;
+    menudata.forEach((item, index) => {
+      $("#menu").append(`<option value=${index}>${item.name}</option>`);
+    })
+  });
+
+  //Listner for selecting a menu item
+  $("#menu").change((e) => {
+    const selected = menudata[e.target.value];
+    $('#dataholder').html(
+      `<p> ID - ${selected.id} </p>
+      <p> Short Name - ${selected.short_name} </p>
+      <p> Name - ${selected.name} </p>
+      <p> Description - ${selected.description} </p>
+      <p> Price small - ${selected.price_small} </p>
+      <p> Price Large - ${selected.price_large} </p>
+      <p> Small Portion Name - ${selected.small_portion_name} </p>
+      <p> Large Portion_Name - ${selected.large_portion_name} </p>
+      `
+    )
+  })
 });
